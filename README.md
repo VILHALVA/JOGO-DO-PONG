@@ -15,8 +15,9 @@
 <img src="https://yt3.ggpht.com/ytc/AMLnZu-wtZzoT6Qpw-h2Ng_bpT8SvaWca_w-EGKc5D69kQ=s900-c-k-c0x00ffffff-no-rj" align="center" width="280"> <br>
 
 # SOBRE O JOGO
-* ✅ Esse código foi extraido do Youtuber "O PROGRAMADOR" (Devidos créditos).
-* ✅ Para funcionar corretamente, além do Python instalado, você terá que instalar:
+* ✅Esse código foi extraido do Youtuber "O PROGRAMADOR" (Devidos créditos).
+* ✅Neste repositório temos o mesmo jogo em Python e C#. Você escolhe a liguagem que achar melhor. 
+* ✅Para funcionar corretamente, além do Python instalado, você terá que instalar:
 * 🔸 PYGAME
 * 🔸 OPENGL
-* ✅ Apesar de você dá Play no Console da sua IDE, esse jogo roda com INTERFACE GRÁFICA.
+* ✅Apesar de você dá Play no Console da sua IDE, esse jogo roda com INTERFACE GRÁFICA.
