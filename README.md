@@ -4,7 +4,8 @@
 [![GitHub Repo stars](https://img.shields.io/badge/VILHALVA-GITHUB-03A9F4?logo=github)](https://github.com/VILHALVA)
 [![GitHub Repo stars](https://img.shields.io/badge/MEUS-CURSOS-03A9F4?logo=github)](https://github.com/VILHALVA?tab=repositories&q=CURSO&type=public&language=&sort=) <br>
 
-<img src="https://images.vexels.com/media/users/3/286116/isolated/lists/038a374343bb9e6dfedea44874bbf994-pa-e-bola-de-ping-pong.png" align="center" width="280"> <br>
+<img src="FOTO.png" align="center" width="300"> <br>
+> IMAGEM ILUSTRATIVA!
 
 ## 😎DESCRIÇÃO:
 Bem-vindo ao projeto "Jogo do Pong"! Este repositório contém implementações em Python e C# do clássico jogo Pong. O Pong é um dos primeiros jogos eletrônicos da história e foi lançado em 1972 pela Atari. É um jogo de esporte simples, onde dois jogadores controlam barras verticais em lados opostos da tela, tentando acertar uma bola e enviá-la para o campo do adversário.
