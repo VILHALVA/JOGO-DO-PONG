@@ -1,20 +1,51 @@
 # JOGO DO PONG
 🎮JOGO DO PONG COM INTERFACE GRAFICA.
 
-[![GitHub Repo stars](https://img.shields.io/badge/VILHALVA-GITHUB-03A9F4?logo=github)](https://github.com/VILHALVA)
-[![GitHub Repo stars](https://img.shields.io/badge/MEUS-CURSOS-03A9F4?logo=github)](https://github.com/VILHALVA?tab=repositories&q=CURSO&type=public&language=&sort=) <br>
+<img src="FOTO.png" align="center" width="400"> <br>
 
-<img src="FOTO.png" align="center" width="300"> <br>
-> IMAGEM ILUSTRATIVA!
+## DESCRIÇÃO:
+Este programa utiliza a biblioteca Pygame e OpenGL para criar um jogo simples de Pong, um jogo de arcade clássico de dois jogadores. Aqui estão as principais funcionalidades do código:
 
-## 😎DESCRIÇÃO:
-Bem-vindo ao projeto "Jogo do Pong"! Este repositório contém implementações em Python e C# do clássico jogo Pong. O Pong é um dos primeiros jogos eletrônicos da história e foi lançado em 1972 pela Atari. É um jogo de esporte simples, onde dois jogadores controlam barras verticais em lados opostos da tela, tentando acertar uma bola e enviá-la para o campo do adversário.
+- Define as dimensões da janela do jogo (640x480 pixels).
+- Inicializa as variáveis relacionadas à posição e velocidade da bola, bem como à posição dos jogadores.
+- Implementa funções para calcular as coordenadas X dos jogadores e as dimensões dos jogadores.
+- Atualiza a lógica do jogo, movendo a bola, verificando colisões com os jogadores e as bordas da tela, e atualizando as posições dos jogadores com base nas teclas pressionadas.
+- Implementa funções para desenhar retângulos coloridos na tela, representando a bola e os jogadores.
+- Configura o ambiente OpenGL e a matriz de projeção para renderizar os elementos na tela.
+- Utiliza um loop principal para continuamente atualizar e desenhar o estado do jogo.
 
-O objetivo deste projeto é oferecer diferentes implementações do Pong em duas linguagens de programação populares. Aqui estão as principais funcionalidades implementadas em cada versão:
+O jogo é controlado pelos seguintes comandos do teclado:
+- Jogador 1 (vermelho): Teclas "W" para cima e "S" para baixo.
+- Jogador 2 (azul): Teclas de seta para cima e para baixo.
 
-1. **Modo de jogo para dois jogadores:** Você pode jogar contra um amigo, cada um controlando uma barra com suas teclas correspondentes.
-2. **Movimento suave da barra:** As barras respondem de forma suave aos comandos do jogador, permitindo um controle preciso durante o jogo.
-3. **Colisões realistas:** A bola rebaterá nas barras e nas paredes de forma realista, seguindo as leis da física.
-4. **Sistema de pontuação:** Mantenha o controle da pontuação de cada jogador à medida que a bola passa pela barra adversária.
-5. **Efeitos sonoros:** Desfrute de efeitos sonoros empolgantes que aprimoram a experiência de jogo.
+O jogo continua indefinidamente no loop principal, sendo atualizado e renderizado a cada iteração.
+
+## COMO USAR?
+**Passo 1:** Clone o repositório para o seu sistema local.
+
+```bash
+git clone https://github.com/VILHALVA/JOGO-DO-PONG.git
+```
+
+**Passo 2:** Navegue até o diretório do projeto.
+
+```bash
+cd JOGO-DO-PONG
+```
+
+**Passo 3:** Descompacte o arquivo ZIP (se você baixou manualmente):
+
+```bash
+unzip JOGO-DO-PONG.zip
+```
+
+**Passo 4:** Execute o executável do projeto.
+
+```bash
+./JOGO-DO-PONG
+```
+
+## CREDITOS:
+- [PROJETO CRIADO PELO VILHALVA](https://github.com/VILHALVA)
+
 
