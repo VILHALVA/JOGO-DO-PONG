@@ -20,9 +20,29 @@ O jogo é controlado pelos seguintes comandos do teclado:
 
 O jogo continua indefinidamente no loop principal, sendo atualizado e renderizado a cada iteração.
 
-## SAIBA MAIS:
+## EXECUTANDO O JOGO:
+1. Certifique-se de ter o Pygame e o PyOpenGL instalados. Você pode instalá-los usando pip:
+    ```bash
+    pip install pygame PyOpenGL
+    ```
+2. Execute o arquivo Python.
+3. O jogo da Pong será iniciado em uma janela.
+4. Use as teclas 'W' e 'S' para mover o jogador 1 para cima e para baixo, respectivamente.
+5. Use as teclas de seta para cima e para baixo para mover o jogador 2 para cima e para baixo, respectivamente.
+
+## SOBRE O EXECUTAVEL:
+- Este arquivo executável está disponível apenas para `Windows X64`. Para executá-lo, basta dar dois cliques. O executável é bastante útil caso o Python não esteja instalado. Trata-se da mesma aplicação do arquivo `CODIGO.py`. Se desejar, você pode recompilá-lo novamente; é para isso que forneci o arquivo `imagem.ico`.
+
+## NÃO SABE?
+- Entendemos que para manipular arquivos em muitas linguagens e tecnologias, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:
+* [CURSO DE PYTHON](https://github.com/VILHALVA/CURSO-DE-PYTHON)
+* [CURSO DE EXE](https://github.com/VILHALVA/CURSO-DE-EXE)
+* [CONFIRA MAIS CURSOS](https://github.com/VILHALVA?tab=repositories&q=+topic:CURSO)
+
+## CREDITOS:
 - [PROJETO CRIADO PELO VILHALVA](https://github.com/VILHALVA)
-- [FAÇA OS NOSSOS CURSOS](https://github.com/VILHALVA?tab=repositories&q=+topic:CURSO)
+
+
 
 
 
