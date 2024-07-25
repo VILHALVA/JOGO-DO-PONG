@@ -30,26 +30,6 @@ O jogo continua indefinidamente no loop principal, sendo atualizado e renderizad
 4. Use as teclas 'W' e 'S' para mover o jogador 1 para cima e para baixo, respectivamente.
 5. Use as teclas de seta para cima e para baixo para mover o jogador 2 para cima e para baixo, respectivamente.
 
-## SOBRE O EXECUTAVEL:
-### 1. EXECUTANDO:
-- Este arquivo executável está disponível apenas para `Windows X64`. Para executá-lo, basta dar dois cliques. O executável é bastante útil caso o Python não esteja instalado. Trata-se da mesma aplicação do arquivo `CODIGO.py`. Se desejar, você pode recompilá-lo novamente; é para isso que forneci o arquivo `imagem.ico`.
-
-### 2. GERANDO:
-   **1. Instalação do [PyInstaller:](https://pyinstaller.org/en/stable/)**
-   - Certifique-se de ter o PyInstaller instalado. Se não tiver, instale usando o comando abaixo:
-   ```bash
-   pip install pyinstaller
-   ```
-
-   **2. Gerando o Executável:**
-   - Para gerar o executável, utilize o comando `pyinstaller` seguido de opções:
-      - `--icon="imagem.ico"`: Especifica o ícone do executável.
-      - `-F`: Gera um único arquivo executável em vez de vários.
-      - `CODIGO.py`: Substitua "CODIGO.py" pelo nome do seu arquivo Python principal.
-   ```bash
-   pyinstaller --icon="imagem.ico" -F CODIGO.py
-   ```
-
 ## NÃO SABE?
 - Entendemos que para manipular arquivos em muitas linguagens e tecnologias, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:
 * [CURSO DE PYTHON](https://github.com/VILHALVA/CURSO-DE-PYTHON)
