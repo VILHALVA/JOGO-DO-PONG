@@ -1,7 +1,7 @@
-# JOGO DO PONG
+# JOGO DO PONG GL
 🎮JOGO DO PONG COM INTERFACE GRAFICA.
 
-<img src="FOTO.png" align="center" width="400"> <br>
+<img src="IMAGEM.png" align="center" width="400"> <br>
 
 ## DESCRIÇÃO:
 Este programa utiliza a biblioteca Pygame e OpenGL para criar um jogo simples de Pong, um jogo de arcade clássico de dois jogadores. Aqui estão as principais funcionalidades do código:
@@ -21,22 +21,33 @@ O jogo é controlado pelos seguintes comandos do teclado:
 O jogo continua indefinidamente no loop principal, sendo atualizado e renderizado a cada iteração.
 
 ## EXECUTANDO O JOGO:
-1. Certifique-se de ter o Pygame e o PyOpenGL instalados. Você pode instalá-los usando pip:
-    ```bash
-    pip install pygame PyOpenGL
-    ```
-2. Execute o arquivo Python.
-3. O jogo da Pong será iniciado em uma janela.
-4. Use as teclas 'W' e 'S' para mover o jogador 1 para cima e para baixo, respectivamente.
-5. Use as teclas de seta para cima e para baixo para mover o jogador 2 para cima e para baixo, respectivamente.
+1. **Instalando as dependências:**
+   - Antes de executar o jogo, certifique-se de instalar todas as dependências necessárias. No terminal, execute o seguinte comando para instalar as dependências listadas no arquivo `requirements.txt` em `CODIGO`:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Inicie o Jogo:**
+   - Inicie com o seguinte comando:
+   ```bash
+   python CODIGO.py
+   ```
+
+3. **Jogando:**
+   1. O jogo da Pong será iniciado em uma janela.
+   2. Use as teclas 'W' e 'S' para mover o jogador 1 para cima e para baixo, respectivamente.
+   3. Use as teclas de seta para cima e para baixo para mover o jogador 2 para cima e para baixo, respectivamente.
 
 ## NÃO SABE?
 - Entendemos que para manipular arquivos em muitas linguagens e tecnologias, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:
+* [CURSO DE PYGAME](https://github.com/VILHALVA/CURSO-DE-PYGAME)
 * [CURSO DE PYTHON](https://github.com/VILHALVA/CURSO-DE-PYTHON)
 * [CONFIRA MAIS CURSOS](https://github.com/VILHALVA?tab=repositories&q=+topic:CURSO)
 
 ## CREDITOS:
-- [PROJETO CRIADO PELO VILHALVA](https://github.com/VILHALVA)
+- [PROJETO CRIADO PELO "oprogramadorreal"](https://github.com/oprogramadorreal/Prong.py)
+- [VEJA O VIDEO DESSE PROJETO](https://youtu.be/Is3q5Bbs9zA?si=a4ml_4csCqSN-omV)
+- [PROJETO EDITADO PELO VILHALVA](https://github.com/VILHALVA)
 
 
 
