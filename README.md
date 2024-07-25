@@ -1,24 +1,12 @@
 # JOGO DO PONG GL
-🎮JOGO DO PONG COM INTERFACE GRAFICA.
+🎮MANTENHA A BOLA EM JOGO E TENTE ACERTÁ-LA PARA O LADO DO ADVERSÁRIO, EVITANDO QUE A BOLA PASSE PELA SUA RAQUETE.
 
-<img src="IMAGEM.png" align="center" width="400"> <br>
+<img src="FOTO.png" align="center" width="400"> <br>
 
 ## DESCRIÇÃO:
-Este programa utiliza a biblioteca Pygame e OpenGL para criar um jogo simples de Pong, um jogo de arcade clássico de dois jogadores. Aqui estão as principais funcionalidades do código:
+Pong Adaptado é uma versão simples do clássico jogo Pong, onde dois jogadores competem para manter a bola em jogo e evitar que ela passe por suas respectivas áreas. A bola se move pela tela e rebate nas bordas e nas raquetes dos jogadores. O objetivo é evitar que a bola saia da tela pela lateral do seu lado.
 
-- Define as dimensões da janela do jogo (640x480 pixels).
-- Inicializa as variáveis relacionadas à posição e velocidade da bola, bem como à posição dos jogadores.
-- Implementa funções para calcular as coordenadas X dos jogadores e as dimensões dos jogadores.
-- Atualiza a lógica do jogo, movendo a bola, verificando colisões com os jogadores e as bordas da tela, e atualizando as posições dos jogadores com base nas teclas pressionadas.
-- Implementa funções para desenhar retângulos coloridos na tela, representando a bola e os jogadores.
-- Configura o ambiente OpenGL e a matriz de projeção para renderizar os elementos na tela.
-- Utiliza um loop principal para continuamente atualizar e desenhar o estado do jogo.
-
-O jogo é controlado pelos seguintes comandos do teclado:
-- Jogador 1 (vermelho): Teclas "W" para cima e "S" para baixo.
-- Jogador 2 (azul): Teclas de seta para cima e para baixo.
-
-O jogo continua indefinidamente no loop principal, sendo atualizado e renderizado a cada iteração.
+A cada colisão com uma raquete, a bola rebaterá na direção oposta. Se a bola sair da tela lateralmente, ela será reposicionada no centro, e o jogo continua. O jogo exige agilidade e precisão para garantir que a bola não passe pelas raquetes e saia da tela.
 
 ## EXECUTANDO O JOGO:
 1. **Instalando as dependências:**
@@ -34,9 +22,10 @@ O jogo continua indefinidamente no loop principal, sendo atualizado e renderizad
    ```
 
 3. **Jogando:**
-   1. O jogo da Pong será iniciado em uma janela.
-   2. Use as teclas 'W' e 'S' para mover o jogador 1 para cima e para baixo, respectivamente.
-   3. Use as teclas de seta para cima e para baixo para mover o jogador 2 para cima e para baixo, respectivamente.
+   - **Jogador 1**:
+      - Use as teclas `W` e `S` para mover sua raquete para cima e para baixo, respectivamente.
+   - **Jogador 2**:
+      - Use as setas `↑` e `↓` para mover sua raquete para cima e para baixo, respectivamente.
 
 ## NÃO SABE?
 - Entendemos que para manipular arquivos em muitas linguagens e tecnologias, é necessário possuir conhecimento nessas áreas. Para auxiliar nesse aprendizado, oferecemos cursos gratuitos disponíveis:

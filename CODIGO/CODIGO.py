@@ -1,24 +1,28 @@
 import pygame
-from pygame.locals import *
-from OpenGL.GL import *
+import sys
 
 LARGURA_JANELA = 640
 ALTURA_JANELA = 480
 
-xDaBola = 0
-yDaBola = 0
+AMARELO = (255, 255, 0)
+VERMELHO = (255, 0, 0)
+AZUL = (0, 0, 255)
+PRETO = (0, 0, 0)
+
+xDaBola = LARGURA_JANELA / 2
+yDaBola = ALTURA_JANELA / 2
 tamanhoDaBola = 20
 velocidadeDaBolaEmX = 3
 velocidadeDaBolaEmY = 3
 
-yDoJogador1 = 0
-yDoJogador2 = 0
+yDoJogador1 = ALTURA_JANELA / 2
+yDoJogador2 = ALTURA_JANELA / 2
 
 def xDoJogador1():
-    return -LARGURA_JANELA / 2 + larguraDosJogadores() / 2
+    return 30  
 
 def xDoJogador2():
-    return LARGURA_JANELA / 2 - larguraDosJogadores() / 2
+    return LARGURA_JANELA - 30 - larguraDosJogadores()
 
 def larguraDosJogadores():
     return tamanhoDaBola
@@ -29,8 +33,8 @@ def alturaDosJogadores():
 def atualizar():
     global xDaBola, yDaBola, velocidadeDaBolaEmX, velocidadeDaBolaEmY, yDoJogador1, yDoJogador2
 
-    xDaBola = xDaBola + velocidadeDaBolaEmX
-    yDaBola = yDaBola + velocidadeDaBolaEmY
+    xDaBola += velocidadeDaBolaEmX
+    yDaBola += velocidadeDaBolaEmY
 
     if (xDaBola + tamanhoDaBola / 2 > xDoJogador2() - larguraDosJogadores() / 2
     and yDaBola - tamanhoDaBola / 2 < yDoJogador2 + alturaDosJogadores() / 2
@@ -42,59 +46,46 @@ def atualizar():
     and yDaBola + tamanhoDaBola / 2 > yDoJogador1 - alturaDosJogadores() / 2):
         velocidadeDaBolaEmX = -velocidadeDaBolaEmX
 
-    if yDaBola + tamanhoDaBola / 2 > ALTURA_JANELA / 2:
+    if yDaBola + tamanhoDaBola / 2 > ALTURA_JANELA or yDaBola - tamanhoDaBola / 2 < 0:
         velocidadeDaBolaEmY = -velocidadeDaBolaEmY
 
-    if yDaBola - tamanhoDaBola / 2 < -ALTURA_JANELA / 2:
-        velocidadeDaBolaEmY = -velocidadeDaBolaEmY
-
-    if xDaBola < -LARGURA_JANELA / 2 or xDaBola > LARGURA_JANELA / 2:
-        xDaBola = 0
-        yDaBola = 0
+    if xDaBola < 0 or xDaBola > LARGURA_JANELA:
+        xDaBola = LARGURA_JANELA / 2
+        yDaBola = ALTURA_JANELA / 2
 
     keys = pygame.key.get_pressed()
 
-    if keys[K_w]:
-        yDoJogador1 = yDoJogador1 + 5
+    if keys[pygame.K_w]:
+        yDoJogador1 -= 5
+    if keys[pygame.K_s]:
+        yDoJogador1 += 5
+    if keys[pygame.K_UP]:
+        yDoJogador2 -= 5
+    if keys[pygame.K_DOWN]:
+        yDoJogador2 += 5
 
-    if keys[K_s]:
-        yDoJogador1 = yDoJogador1 - 5
-
-    if keys[K_UP]:
-        yDoJogador2 = yDoJogador2 + 5
-
-    if keys[K_DOWN]:
-        yDoJogador2 = yDoJogador2 - 5
-
-def desenharRetangulo(x, y, largura, altura, r, g, b):
-    glColor3f(r, g, b)
-
-    glBegin(GL_QUADS)
-    glVertex2f(-0.5 * largura + x, -0.5 * altura + y)
-    glVertex2f(0.5 * largura + x, -0.5 * altura + y)
-    glVertex2f(0.5 * largura + x, 0.5 * altura + y)
-    glVertex2f(-0.5 * largura + x, 0.5 * altura + y)
-    glEnd()
+    yDoJogador1 = max(0, min(yDoJogador1, ALTURA_JANELA - alturaDosJogadores()))
+    yDoJogador2 = max(0, min(yDoJogador2, ALTURA_JANELA - alturaDosJogadores()))
 
 def desenhar():
-    glViewport(0, 0, LARGURA_JANELA, ALTURA_JANELA)
-
-    glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
-    glOrtho(-LARGURA_JANELA / 2, LARGURA_JANELA / 2, -ALTURA_JANELA / 2, ALTURA_JANELA / 2, 0, 1)
-
-    glClear(GL_COLOR_BUFFER_BIT)
-
-    desenharRetangulo(xDaBola, yDaBola, tamanhoDaBola, tamanhoDaBola, 1, 1, 0)
-    desenharRetangulo(xDoJogador1(), yDoJogador1, larguraDosJogadores(), alturaDosJogadores(), 1, 0, 0)
-    desenharRetangulo(xDoJogador2(), yDoJogador2, larguraDosJogadores(), alturaDosJogadores(), 0, 0, 1)
-
+    screen.fill(PRETO)
+    pygame.draw.rect(screen, AMARELO, (xDaBola - tamanhoDaBola / 2, yDaBola - tamanhoDaBola / 2, tamanhoDaBola, tamanhoDaBola))
+    pygame.draw.rect(screen, VERMELHO, (xDoJogador1(), yDoJogador1, larguraDosJogadores(), alturaDosJogadores()))
+    pygame.draw.rect(screen, AZUL, (xDoJogador2(), yDoJogador2, larguraDosJogadores(), alturaDosJogadores()))
     pygame.display.flip()
 
 pygame.init()
-pygame.display.set_mode((LARGURA_JANELA, ALTURA_JANELA), DOUBLEBUF | OPENGL)
+screen = pygame.display.set_mode((LARGURA_JANELA, ALTURA_JANELA))
+pygame.display.set_caption("Jogo de Pong")
+
+clock = pygame.time.Clock()
 
 while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
     atualizar()
     desenhar()
-    pygame.event.pump()
+    clock.tick(60)
